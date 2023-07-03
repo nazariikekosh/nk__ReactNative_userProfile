@@ -5,6 +5,51 @@ import {COLORS} from '../constants'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const Settings = ({navigation}) => {
+
+  const navigateToEditProfile = () => {
+    // navigation.navigate("EditProfile")
+    console.log('EditProfile function')
+  };
+  const navigateToSecurity = () => {
+    console.log('Security function')
+  };
+  const navigateToNotifications = () => {
+    console.log('Notifications function')
+  };
+  const navigateToPrivacy = () => {
+    console.log('Privacy function')
+  }
+
+
+  const accountItems = [
+    {icon:"person-outline", text: "Edit Profile", action: navigateToEditProfile},
+    {icon: "security", text: "Security", action: navigateToSecurity},
+    {icon: "notifications-none", text: "Notifications", action: navigateToNotifications},
+    {icon: "lock-outline", text: "Privacy", action: navigateToPrivacy},
+  ];
+
+  const renderSettingsItem = ({icon, text, action}) => (
+    <TouchableOpacity
+      onPress={action}
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingVertical: 8,
+        paddingLeft: 12
+      }}
+    >
+      <MaterialIcons name={icon} size={24} color="black" />
+      <Text style={{
+        marginLeft: 36,
+        fontSize: 16,
+        fontFamily: 'Inter',
+        fontWeight: 600,
+      }}>{text}</Text>
+
+    </TouchableOpacity>
+
+  )
+
   return (
     <SafeAreaView style={{
       flex: 1,
@@ -16,6 +61,22 @@ const Settings = ({navigation}) => {
         </TouchableOpacity>
         <Text style={{color: '#000000', fontSize: 24, fontWeight: 'bold', fontFamily: 'Inter'}}>Settings</Text>
       </View>
+
+      {/* Account Seting*/}
+
+    <View style={{marginBottom: 12, marginHorizontal: 20}}>
+      <Text style={{color: '#000000', fontSize: 18, fontWeight: 'bold', fontFamily: 'Inter', marginVertical: 10}}>Account</Text>
+      <View style={{borderRadius: 12, backgroundColor: COLORS.gray}}>
+      {
+        accountItems.map ((item, index) => (
+          <React.Fragment key={index}>
+            {renderSettingsItem(item)}
+          </React.Fragment>
+        ) )
+      }
+      </View>
+    </View>
+
     </SafeAreaView>
   )
 }
