@@ -42,7 +42,7 @@ const BottomTabsNav = () => {
             return (
               <SimpleLineIcons
                 name="home"
-                size={24}
+                size={32}
                 color={focused ? COLORS.primary : COLORS.black}
               />
             );
@@ -57,7 +57,7 @@ const BottomTabsNav = () => {
             return (
               <MaterialCommunityIcons
                 name="message-text-outline"
-                size={24}
+                size={32}
                 color={focused ? COLORS.primary : COLORS.black}
               />
             );
@@ -82,7 +82,7 @@ const BottomTabsNav = () => {
                   borderWidth: 2,
                   borderColor: COLORS.white,
                 }}>
-                <Fontisto name="plus-a" size={24} color={COLORS.white} />
+                <Fontisto name="plus-a" size={32} color={COLORS.white} />
               </View>
             );
           },
@@ -96,7 +96,7 @@ const BottomTabsNav = () => {
             return (
               <MaterialIcons
                 name="settings"
-                size={24}
+                size={32}
                 color={focused ? COLORS.primary : COLORS.black}
               />
             );
@@ -112,7 +112,7 @@ const BottomTabsNav = () => {
             return (
               <MaterialIcons
                 name="person-outline"
-                size={24}
+                size={32}
                 color={focused ? COLORS.primary : COLORS.black}
               />
             );
