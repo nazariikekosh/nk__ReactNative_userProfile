@@ -38,7 +38,7 @@ const Settings = ({navigation}) => {
         paddingLeft: 12
       }}
     >
-      <MaterialIcons name={icon} size={24} color="black" />
+      <MaterialIcons name={icon} size={30} color="black" />
       <Text style={{
         marginLeft: 36,
         fontSize: 16,
