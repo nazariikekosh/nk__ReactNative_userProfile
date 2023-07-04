@@ -146,6 +146,7 @@ const Settings = ({navigation}) => {
       </View>
 
       <ScrollView style={{marginHorizontal: 12}}>
+        
         {/* Account Seting*/}
 
         <View style={{marginBottom: 12, marginHorizontal: 20}}>
@@ -181,7 +182,7 @@ const Settings = ({navigation}) => {
             }}>
             Support & About
           </Text>
-          <View style={{borderRadius: 12, backgroundColor: COLORS.gray}}>
+          <View style={{borderRadius: 12, backgroundColor: COLORS.gray }}>
             {supportItems.map((item, index) => (
               <React.Fragment key={index}>
                 {renderSettingsItem(item)}
@@ -189,6 +190,51 @@ const Settings = ({navigation}) => {
             ))}
           </View>
         </View>
+
+        {/* Cache and Cellular */}
+
+        <View style={{marginBottom: 12, marginHorizontal: 20}}>
+          <Text
+            style={{
+              color: '#000000',
+              fontSize: 18,
+              fontWeight: 'bold',
+              fontFamily: 'Inter',
+              marginVertical: 10,
+            }}>
+            Cache & Cellular
+          </Text>
+          <View style={{borderRadius: 12, backgroundColor: COLORS.gray}}>
+            {cacheAndCellularItems.map((item, index) => (
+              <React.Fragment key={index}>
+                {renderSettingsItem(item)}
+              </React.Fragment>
+            ))}
+          </View>
+        </View>
+
+        {/* Action Settings */}
+
+        <View style={{marginBottom: 80, marginHorizontal: 20}}>
+          <Text
+            style={{
+              color: '#000000',
+              fontSize: 18,
+              fontWeight: 'bold',
+              fontFamily: 'Inter',
+              marginVertical: 10,
+            }}>
+            Actions
+          </Text>
+          <View style={{borderRadius: 12, backgroundColor: COLORS.gray }}>
+            {actionsItems.map((item, index) => (
+              <React.Fragment key={index}>
+                {renderSettingsItem(item)}
+              </React.Fragment>
+            ))}
+          </View>
+        </View>
+
       </ScrollView>
     </SafeAreaView>
   );
