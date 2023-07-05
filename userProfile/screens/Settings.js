@@ -160,7 +160,7 @@ const Settings = ({navigation}) => {
             }}>
             Account
           </Text>
-          <View style={{borderRadius: 12, backgroundColor: COLORS.gray}}>
+          <View style={{borderRadius: 6, backgroundColor: COLORS.gray}}>
             {accountItems.map((item, index) => (
               <React.Fragment key={index}>
                 {renderSettingsItem(item)}
