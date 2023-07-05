@@ -4,12 +4,25 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { COLORS } from '../constants';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { imagesDataURL } from '../constants/data';
+import  * as ImagePicker  from  'react-native-image-picker' ;
 
 const EditProfile = ({navigation}) => {
 
   const [selectedImage, setSelectedImage] = useState(imagesDataURL[0]);
-  const handleImageSelection = () => {
-    
+  const handleImageSelection = async () => {
+    let result = ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1
+    });
+
+    console.log(result);
+
+    if(!await result.canceled){
+      setSelectedImage(result.assets[0].uri);
+    }
+
   }
   return (
     <SafeAreaView style={{
