@@ -6,7 +6,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const Settings = ({navigation}) => {
   const navigateToEditProfile = () => {
-    console.log('EditProfile function');
+    navigation.navigate('EditProfile');
   };
   const navigateToSecurity = () => {
     console.log('Security function');
