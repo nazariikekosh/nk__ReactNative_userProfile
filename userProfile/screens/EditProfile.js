@@ -360,6 +360,21 @@ const EditProfile = ({navigation}) => {
             </View>
           </View>
         </View>
+        <TouchableOpacity style={{
+            backgroundColor: COLORS.primary,
+            height: 44,
+            borderRadius: 6,
+            alignItems: 'center',
+            justifyContent: 'center',
+            
+        }}>
+            <Text style={{
+                fontFamily: 'Inter',
+                fontSize: 20,
+                fontWeight: 500,
+                color: COLORS.white
+            }}>Save</Text>
+        </TouchableOpacity>
         {renderDatePicker()}
       </ScrollView>
     </SafeAreaView>
