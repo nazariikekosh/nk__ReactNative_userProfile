@@ -17,6 +17,25 @@ const Profile = () => {
             }}
         />
         </View>
+
+        <View style={{
+            flex: 1,
+            alignItems: 'center',
+        }}>
+            <Image 
+                source={images.profile}
+                resizeMode='contain'
+                style={{
+                    height: 155,
+                    width: 155,
+                    borderRadius: 999,
+                    borderColor: COLORS.primary,
+                    borderWidth: 2,
+                    marginTop: -90
+                }}
+            />
+            
+        </View>
         
     </SafeAreaView>
   )
