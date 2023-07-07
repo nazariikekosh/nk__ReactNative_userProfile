@@ -6,7 +6,7 @@ import { COLORS, images } from '../constants'
 const Profile = () => {
   return (
     <SafeAreaView  style={{flex: 1, backgroundColor: COLORS.white}}>
-        <StatusBar backgroundColor={COLORS.gray} />
+        <StatusBar backgroundColor={COLORS.gray}  barStyle="dark-content" />
         <View style={{ width: '100%'}}>
         <Image 
             source={images.cover}
